@@ -11,5 +11,23 @@ const app = Vue.createApp({
               { id: 2235, color: 'blue', image: './assets/images/socks_blue.jpg' },
             ]
         }
+    },
+    methods: {
+        addCart(){
+            this.cart +=1
+        },
+        imageChangeOnMouseOver(variantImage){
+        this.image = variantImage
+        },
+
+        removeCart(){
+            if (this.cart>0){
+                this.cart -=1
+            }
+            else {
+                alert("Nothing to Remove")
+            }
+            
+        }
     }
 })
